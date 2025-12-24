@@ -1,5 +1,4 @@
 import os
-from typing import List
 from pydantic import BaseModel, Field
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -68,3 +67,4 @@ def chat_with_pet_assistant():
 if __name__ == "__main__":
 
     chat_with_pet_assistant()
+
