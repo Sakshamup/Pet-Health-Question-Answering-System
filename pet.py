@@ -12,7 +12,7 @@ class PetHealthResponse(BaseModel):
     response_content: str = Field(description="The helpful advice for the user")
     disclaimer: str = Field(description="Required safety disclaimer")
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAzgkuTI6mUOGcoqsgrLHUP4nVbqIA7uRg" 
+os.environ["GOOGLE_API_KEY"] = "Your API Key" 
 model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0.1) 
 parser = PydanticOutputParser(pydantic_object=PetHealthResponse)
 
@@ -66,4 +66,5 @@ def chat_with_pet_assistant():
             print(f"\nSystem Error: Unable to process safely. Please contact a vet immediately. Error: {e}")
 
 if __name__ == "__main__":
+
     chat_with_pet_assistant()
